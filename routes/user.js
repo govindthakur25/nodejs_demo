@@ -11,7 +11,7 @@ const router = express.Router();
 router.route("/").get(handleGetAllUsers).post(handleCreateNewUser);
 
 router
-  .route(":id")
+  .route("/:id")
   .patch(handleUpdateUserById)
   .get(handleGetUserById)
   .delete(handleDeleteUserById);
