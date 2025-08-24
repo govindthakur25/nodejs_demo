@@ -1,5 +1,12 @@
 import User from "../models/user.js";
 
+const REQUIRED_FIELDS = [
+  "first_name",
+  "last_name",
+  "email",
+  "gender",
+  "job_title",
+];
 async function handleGetAllUsers(req, res) {
   const users = await User.find({});
   return res.json(users);

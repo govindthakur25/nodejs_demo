@@ -4,13 +4,7 @@ import { userRouter } from "./routes/user.js";
 
 const app = express();
 const PORT = 8000;
-const REQUIRED_FIELDS = [
-  "first_name",
-  "last_name",
-  "email",
-  "gender",
-  "job_title",
-];
+
 await connectToMongoDB("mongodb://127.0.0.1:27017/users");
 // Middleware to parse the body
 app.use(express.urlencoded({ extended: false }));
